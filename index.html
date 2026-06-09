@@ -183,9 +183,27 @@
     letter-spacing: 0.02em;
     transition: background 0.2s, transform 0.15s;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
   .btn-primary:hover { background: #2a95cb; transform: translateY(-1px); }
+
+  .btn-incri {
+    background: var(--gray-mid);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s, color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-incri:hover { background: #2a95cb; transform: translateY(-1px); }
 
   .btn-outline {
     background: transparent;
@@ -199,7 +217,9 @@
     letter-spacing: 0.02em;
     transition: border-color 0.2s, color 0.2s;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
   .btn-outline:hover { border-color: rgba(255,255,255,0.55); color: white; }
 
@@ -374,7 +394,7 @@
   .eligibility-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin-bottom: 0;
   }
@@ -392,8 +412,6 @@
     padding: 20px 22px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   }
-  .eligibility-list li:nth-child(4) { grid-column: 2 / span 2; }
-  .eligibility-list li:nth-child(5) { grid-column: 4 / span 2; }
   .eligibility-list li:hover {
     border-color: var(--blue-bright);
     box-shadow: 0 4px 16px rgba(37,99,184,0.08);
@@ -881,11 +899,14 @@
     <div class="hero-body">
       <div>
         <div class="hero-label">Programa de Desenvolvimento</div>
-        <h1 class="hero-title">Crescer com estrutura,<br>propósito e <em>apoio real.</em></h1>
-        <p class="hero-desc">A Tech Journey é o programa da Yandeh para colaboradores que querem evoluir — técnica ou comportamentalmente — com custeio parcial ou total da empresa, aprovação por liderança e P&C, e impacto direto na carreira.</p>
+        <h1 class="hero-title">Crescer com estrutura,<br>propósito e apoio.</h1>
+        <p class="hero-desc">A Tech Journey é o programa da Yandeh para colaboradores que querem evoluir, técnica ou comportamentalmente, com custeio parcial ou total da empresa, aprovação por liderança e P&C, e impacto direto na carreira.</p>
         <div class="hero-cta">
+         <a href="https://forms.office.com/r/MhAsLF3CFs"   
+          target="_blank"
+          class="btn-incri">Inscreva-se aqui</a>  
           <a href="#pipeline" class="btn-primary">Como participar →</a>
-          <a href="#criterios" class="btn-outline">Ver critérios</a>
+          <a href="#criterios" class="btn-outline">Ver critérios</a>      
         </div>
       </div>
 
@@ -903,7 +924,7 @@
 <!-- ══ MODALIDADES ══ -->
 <div class="section">
   <div class="section-eyebrow">Modalidades</div>
-  <h2 class="section-title">Cinco caminhos para o <em>próximo nível</em></h2>
+  <h2 class="section-title">Cinco caminhos para o próximo nível</h2>
   <p class="section-lead">Escolha o formato que melhor encaixa no seu momento, no seu squad e na tecnologia que você quer dominar. Cada modalidade tem seu próprio ritmo e objetivo.</p>
 
   <div class="modalities-grid">
@@ -914,7 +935,7 @@
         </svg>
       </div>
       <h3>Plataformas de aprendizado</h3>
-      <p>Acesso a trilhas completas em plataformas como Alura, Coursera e Udemy — do back ao DevOps, do front à IA. Aprenda no seu ritmo, com curadoria de conteúdo alinhada ao seu plano de desenvolvimento.</p>
+      <p>Acesso a trilhas completas em plataformas como Alura, Coursera e Udemy. Aprenda no seu ritmo, com curadoria de conteúdo alinhada ao seu plano de desenvolvimento.</p>
       <div class="modal-examples">
         <span class="modal-tag">Alura</span>
         <span class="modal-tag">Coursera</span>
@@ -931,7 +952,7 @@
         </svg>
       </div>
       <h3>Cursos de curto período</h3>
-      <p>Bootcamps e cursos pontuais com duração até dez/26 para destravar uma stack ou tecnologia específica. Formato intensivo, resultado rápido — ideal para gaps técnicos bem definidos.</p>
+      <p>Bootcamps e cursos pontuais com duração até dez/26 para destravar uma stack ou tecnologia específica.</p>
       <div class="modal-examples">
         <span class="modal-tag">Bootcamps</span>
         <span class="modal-tag">Imersões</span>
@@ -947,7 +968,7 @@
         </svg>
       </div>
       <h3>Eventos presenciais e online</h3>
-      <p>QCon, AWS Summit, The Developer's Conference, Google I/O Extended e outros encontros da comunidade tech. Networking real, tendências em primeira mão e conexão com o ecossistema.</p>
+      <p>QCon, AWS Summit, The Developer's Conference, Google I/O Extended e outros encontros da comunidade tech.</p>
       <div class="modal-examples">
         <span class="modal-tag">QCon</span>
         <span class="modal-tag">AWS Summit</span>
@@ -967,7 +988,7 @@
         </svg>
       </div>
       <h3>Certificações</h3>
-      <p>AWS, GCP, Azure, Kubernetes (CKA/CKAD), Scrum, HashiCorp e demais certificações reconhecidas no mercado. Invista na credencial que comprova o que você já sabe — e abre o que vem a seguir.</p>
+      <p>AWS, GCP, Azure, Kubernetes (CKA/CKAD), Scrum, HashiCorp e demais certificações reconhecidas no mercado.</p>
       <div class="modal-examples">
         <span class="modal-tag">AWS</span>
         <span class="modal-tag">GCP</span>
@@ -985,7 +1006,7 @@
         </svg>
       </div>
       <h3>Outras formas de desenvolvimento</h3>
-      <p>Mentorias, workshops internos, comunidades técnicas e formatos não-tradicionais alinhados ao seu plano. Se o formato importa para o seu crescimento e tem aderência à carreira, vale conversar.</p>
+      <p>Mentorias, workshops internos, comunidades técnicas e formatos não-tradicionais alinhados ao seu desenvolvimento profissional.</p>
       <div class="modal-examples">
         <span class="modal-tag">Mentorias</span>
         <span class="modal-tag">Workshops</span>
@@ -999,7 +1020,7 @@
 <!-- ══ ELEGIBILIDADE ══ -->
 <div class="section" style="background:var(--gray-light);">
   <div class="section-eyebrow">Elegibilidade</div>
-  <h2 class="section-title">Quem pode <em>participar?</em></h2>
+  <h2 class="section-title">Quem pode participar?</h2>
   <p class="section-lead">Colaboradores com interesse genuíno em desenvolvimento técnico ou de soft skills, alinhamento com a liderança e perfil aderente aos critérios abaixo.</p>
 
   <div class="eligibility-layout">
@@ -1022,7 +1043,7 @@
         <span class="elig-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>
         <div>
           <strong>Alinhamento prévio com liderança direta</strong>
-          <div style="font-size:12.5px;color:var(--gray-text);margin-top:3px;">A candidatura nasce de uma conversa real entre você e seu gestor — não de um formulário isolado.</div>
+          <div style="font-size:12.5px;color:var(--gray-text);margin-top:3px;">Será necessário realizar esse alinhamento com sua liderança direta para que a candidatura seja considerada.</div>
         </div>
       </li>
       <li>
@@ -1030,13 +1051,6 @@
         <div>
           <strong>Posicionamento 9-box: Pleno ou superior</strong>
           <div style="font-size:12.5px;color:var(--gray-text);margin-top:3px;">Avaliações de performance e potencial são consideradas no processo.</div>
-        </div>
-      </li>
-      <li>
-        <span class="elig-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>
-        <div>
-          <strong>Mínimo de 1 ciclo de AVD na Yandeh</strong>
-          <div style="font-size:12.5px;color:var(--gray-text);margin-top:3px;">É necessário ter passado por pelo menos uma avaliação de desempenho completa.</div>
         </div>
       </li>
     </ul>
@@ -1070,7 +1084,7 @@
 <!-- ══ PIPELINE ══ -->
 <div class="section" id="pipeline">
   <div class="section-eyebrow">Pipeline</div>
-  <h2 class="section-title">Como participar em <em>4 passos</em></h2>
+  <h2 class="section-title">Como participar em 4 passos</h2>
   <p class="section-lead">O processo é simples e começa com uma conversa com a sua liderança. Do interesse à aprovação, o caminho tem clareza em cada etapa.</p>
 
   <div class="pipeline-steps">
@@ -1078,7 +1092,7 @@
       <div class="step-box">
         <span class="step-num-badge">01</span>
         <h4>Escolha a modalidade e o conteúdo</h4>
-        <p>Mapeie a skill ou stack que quer evoluir e selecione o formato ideal — plataforma, curso, evento ou certificação.</p>
+        <p>Mapeie a skill ou stack que quer evoluir e selecione o formato ideal.</p>
         <div class="step-tip">Pense no que trará impacto direto no seu trabalho hoje e no próximo semestre.</div>
       </div>
     </div>
@@ -1094,7 +1108,7 @@
       <div class="step-box">
         <span class="step-num-badge">03</span>
         <h4>Demonstre interesse no formulário</h4>
-        <p>Faça o 'commit' da sua candidatura preenchendo o formulário oficial com o conteúdo escolhido e justificativa.</p>
+        <p>Faça o 'commit' da sua candidatura preenchendo o formulário.</p>
         <div class="step-tip">Seja específico sobre o impacto esperado para o seu time e carreira.</div>
       </div>
     </div>
@@ -1102,7 +1116,7 @@
       <div class="step-box">
         <span class="step-num-badge">04</span>
         <h4>Formalize e aguarde aprovação</h4>
-        <p>Avaliação por Diretoria e Pessoas &amp; Cultura antes do go-live. Você recebe retorno com prazo definido.</p>
+        <p>Avaliação por Diretoria e Pessoas &amp; Cultura. Você recebe retorno com prazo definido.</p>
         <div class="step-tip">Candidaturas são avaliadas em até 10 dias úteis após o envio.</div>
       </div>
     </div>
@@ -1112,8 +1126,8 @@
 <!-- ══ CRITÉRIOS ══ -->
 <div class="section" id="criterios" style="background:var(--gray-light);">
   <div class="section-eyebrow">Critérios</div>
-  <h2 class="section-title">Critérios de <em>elegibilidade</em></h2>
-  <p class="section-lead">Cada candidatura é avaliada considerando o conjunto abaixo. Os itens são ponderados em conjunto — não há eliminação automática por um único critério.</p>
+  <h2 class="section-title">Critérios de elegibilidade</h2>
+  <p class="section-lead">Cada candidatura é avaliada considerando o conjunto abaixo.</p>
 
   <table class="criteria-table">
     <thead>
@@ -1127,7 +1141,7 @@
       <tr>
         <td>Posicionamento 9-box</td>
         <td><span class="req-badge"><span class="req-dot"></span>Pleno ou superior</span></td>
-        <td>Avaliado no último ciclo de AVD</td>
+        <td>Avaliado no último ciclo de AVD (Se tiver sido elegível)</td>
       </tr>
       <tr>
         <td>Temática do curso</td>
@@ -1136,13 +1150,8 @@
       </tr>
       <tr>
         <td>Tempo de casa</td>
-        <td><span class="req-badge"><span class="req-dot"></span>Mínimo 1 ciclo de AVD</span></td>
-        <td>Colaboradores recentes podem ser avaliados caso a caso</td>
-      </tr>
-      <tr>
-        <td>Permanência mínima pós-programa</td>
-        <td><span class="req-badge"><span class="req-dot"></span>Mínimo 1 ciclo de AVD</span></td>
-        <td>Compromisso de permanência após conclusão do curso</td>
+        <td><span class="req-badge"><span class="req-dot"></span>Mínimo 3 meses de empresa</span></td>
+        <td>Colaboradores mais recentes podem ser avaliados caso a caso</td>
       </tr>
       <tr>
         <td>Histórico de participação na Tech Journey</td>
@@ -1151,13 +1160,13 @@
       </tr>
     </tbody>
   </table>
-  <p class="criteria-note">* Itens marcados são requisitos mínimos. Casos específicos podem ser avaliados pela Diretoria e por Pessoas &amp; Cultura.</p>
+  <p class="criteria-note">* Casos específicos podem ser avaliados pela Diretoria e por Pessoas &amp; Cultura.</p>
 </div>
 
 <!-- ══ COMPROMISSOS ══ -->
 <div class="section">
   <div class="section-eyebrow">Compromissos</div>
-  <h2 class="section-title">O que a Yandeh oferece —<br>e o que <em>esperamos de você</em></h2>
+  <h2 class="section-title">O que a Yandeh oferece<br>e o que esperamos de você</h2>
   <p class="section-lead">A Tech Journey é uma parceria. A empresa investe no seu crescimento; você investe dedicação, aplicação e continuidade.</p>
 
   <div class="commitments-grid">
@@ -1213,11 +1222,7 @@
         <li>
           <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>
           Concluir o programa ou curso aprovado dentro do prazo definido
-        </li>
-        <li>
-          <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>
-          Permanecer na empresa por pelo menos 1 ciclo de AVD após conclusão
-        </li>
+        </li>>
         <li>
           <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>
           Aplicar o conhecimento adquirido no trabalho e compartilhar com o time
@@ -1234,17 +1239,17 @@
 <!-- ══ FAQ ══ -->
 <div class="section" style="background:var(--gray-light);">
   <div class="section-eyebrow">Dúvidas frequentes</div>
-  <h2 class="section-title">Perguntas que <em>todo mundo faz</em></h2>
+  <h2 class="section-title">Perguntas que todo mundo faz</h2>
   <p class="section-lead" style="margin-bottom:36px;">Respostas diretas para as questões mais comuns sobre a Tech Journey.</p>
 
   <div class="faq-grid">
     <div class="faq-item">
       <h4>Posso participar mais de uma vez?</h4>
-      <p>Sim, desde que o histórico de participações anteriores tenha sido positivo — aplicação do conteúdo, conclusão do programa e alinhamento com a liderança. Participações anteriores são consideradas no processo, não como bloqueio.</p>
+      <p>Sim, desde que o histórico de participações anteriores tenha sido positivo: aplicação do conteúdo, conclusão do programa e alinhamento com a liderança. Participações anteriores são consideradas no processo, não como bloqueio.</p>
     </div>
     <div class="faq-item">
       <h4>O custeio é 100% sempre?</h4>
-      <p>Não necessariamente. O percentual de custeio varia de acordo com o tipo de curso, o valor e o contexto. Em muitos casos é total, mas pode ser parcial — isso é definido na aprovação pela Diretoria e P&C.</p>
+      <p>Não necessariamente. O percentual de custeio varia de acordo com o tipo de curso, o valor e o contexto. Em muitos casos é total, mas pode ser parcial, isso é definido na aprovação pela Diretoria e P&C.</p>
     </div>
     <div class="faq-item">
       <h4>E se eu não concluir o programa aprovado?</h4>
@@ -1252,7 +1257,7 @@
     </div>
     <div class="faq-item">
       <h4>Cursos de soft skill também se aplicam?</h4>
-      <p>Sim. A Tech Journey não é só para desenvolvimento técnico — soft skills relevantes para a função e para o plano de carreira também são elegíveis, desde que haja aderência clara e alinhamento com a liderança.</p>
+      <p>Sim. A Tech Journey não é só para desenvolvimento técnico;soft skills relevantes para a função e para o plano de carreira também são elegíveis, desde que haja aderência clara e alinhamento com a liderança.</p>
     </div>
     <div class="faq-item">
       <h4>Qual o prazo para resposta da candidatura?</h4>
